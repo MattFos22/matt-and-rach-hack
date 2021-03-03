@@ -1,0 +1,33 @@
+<!-- When you enter a number into a text box - it tells you if it is a fizz a buzz or a fizz buzz
+
+For each multiple of 3, print "Fizz" instead of the number.
+
+For each multiple of 5, print "Buzz" instead of the number.
+
+For numbers which are multiples of both 3 and 5, print "FizzBuzz" instead of the number. -->
+
+<html>
+  <head>
+    <script>
+        for (i = 0; i < 100; i++) {
+            if(i % 3) {
+                //alert('Fizz')
+                console.log(i, 'Fizz')
+            }
+            else if(i % 5){
+                //alert('Buzz')
+                console.log(i, 'Buzz')
+            }
+            else if(i % 3 === 0 || i % 5 === 0){
+                //alert('FizzBuzz')
+                console.log(i, 'FizzBuzz')
+            }
+            else {
+                console.log(i, 'I wasnt modularly divisible by 3 or 5')
+            }
+        }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

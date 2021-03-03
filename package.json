@@ -1,0 +1,17 @@
+{
+  "name": "matt-and-rach-hack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "fizzbuzz.mjs",
+  "dependencies": {
+    "chai": "^4.2.0"
+  },
+  "devDependencies": {
+    "mocha": "^8.2.1"
+  },
+  "scripts": {
+    "test": "mocha ./mars-rover/specs/*.mjs"
+  },
+  "author": "",
+  "license": "ISC"
+}
