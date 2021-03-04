@@ -1,0 +1,9 @@
+node_modules/
+lerna-debug.log
+junit.xml
+coverage/
+.env
+.vscode/
+**/.DS_Store
+e2e/report/**
+!e2e/report/**/

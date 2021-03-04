@@ -24,7 +24,10 @@ describe('A mars rover graph', () => {
 
 
   it('should be able to add multiple rovers in different positions', () => {
-
+    const graph = new MarsGraph(5, 5);
+    graph.addRover(0, 0, "N");
+    graph.addRover(1, 1, "N");
+    expect(graph.getRoverPositions()).to.be.equal("0 0 N, 1 1 N");
   })
 
 })

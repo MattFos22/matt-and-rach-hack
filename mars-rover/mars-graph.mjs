@@ -11,15 +11,30 @@ class MarsGraph {
 
     getRoverPositions(){
         if(this.rover1)
-            return this.rover1.xPosition.toString() + ' ' + this.rover1.yPosition.toString() + ' ' + this.rover1.facing;
+            if(!this.rover2){
+                return this.rover1.xPosition.toString() + ' ' + this.rover1.yPosition.toString() + ' ' + this.rover1.facing;
+            } else{
+                return this.rover1.xPosition.toString() + ' ' + this.rover1.yPosition.toString() + ' ' + this.rover1.facing
+                    + ', ' + this.rover2.xPosition.toString() + ' ' + this.rover2.yPosition.toString() + ' ' + this.rover2.facing;
+            }
+            
         else
             return "No rovers are on the grid";
     }
 
     addRover(xPosition, yPosition, facing){
-        if(xPosition <= 5 || yPosition <= 5)
-            this.rover1 = {"xPosition":xPosition, "yPosition":yPosition, "facing":facing}
+        if(xPosition <= 5 || yPosition <= 5){
+            if(!this.rover1){
+                this.rover1 = {"xPosition":xPosition, "yPosition":yPosition, "facing":facing}
+            } else{
+                this.rover2= {"xPosition":xPosition, "yPosition":yPosition, "facing":facing}
+            }
+            
+            
+        }
     }
+
+
 
 
 }
